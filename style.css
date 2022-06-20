@@ -100,9 +100,9 @@ h2 {
     color: lightgrey;
 }
 
-h2 a {
+/* h2 a {
     text-decoration: none;
-}
+} */
 
 p {
     text-align: center;
@@ -118,9 +118,9 @@ p.big{
     /* color: lightgrey */
 }
 
-p a {
+/* p a {
     text-decoration: none;
-}
+} */
 
 .center h2 {
     margin: 0;
