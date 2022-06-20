@@ -60,6 +60,17 @@ main {
     .column {
         width: 100%;
     }
+    .column_reg {
+        margin-top: 20%;
+        display: inline-block;
+        width: 90%;
+        text-align: center;
+    }
+    .column_after {
+        display: inline-block;
+        width: 90%;
+        text-align: center;
+    }
 }
 
 .footer {
