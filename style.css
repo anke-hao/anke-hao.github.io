@@ -60,7 +60,7 @@ main {
     .column {
         width: 100%;
     }
-    .column_reg {
+    /* .column_reg {
         margin-top: 50%;
         display: inline-block;
         width: 90%;
@@ -70,7 +70,7 @@ main {
         display: inline-block;
         width: 90%;
         text-align: center;
-    }
+    } */
 }
 
 .footer {
