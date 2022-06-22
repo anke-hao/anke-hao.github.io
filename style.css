@@ -60,7 +60,11 @@ main {
     .column {
         width: 100%;
     }
-    /* .column_reg {
+}
+
+
+@media only screen and (max-width: 479px) {
+    .column_reg {
         margin-top: 50%;
         display: inline-block;
         width: 90%;
@@ -70,7 +74,7 @@ main {
         display: inline-block;
         width: 90%;
         text-align: center;
-    } */
+    }
 }
 
 .footer {
