@@ -16,15 +16,18 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
+        cache-dependency-path: client/package-lock.json  # Point to client folder
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./client  # Run in client folder
 
     - name: Build
       run: npm run build
+      working-directory: ./client  # Run in client folder
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./client/dist  # Deploy from client/dist
