@@ -77,7 +77,7 @@ const Home: React.FC = () => (
             </div>
         </section>
         <section id="projects" className="w3-center center">
-            <h2><b>WHAT I'VE BEEN WORKING ON</b></h2>
+            <h2><b>WHAT I'VE WORKED ON</b></h2>
             <ProjectGallery projects={projects} />
         </section>
     </main>

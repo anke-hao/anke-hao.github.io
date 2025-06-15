@@ -148,16 +148,6 @@ p.big{
     min-height: 100vh;  /* Default height for sections */
 }
 
-/* Specific height for introduction section */
-/* #introduction.center {
-    min-height: 75vh;
-} */
-
-/* .center h1, .center h2 {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-} */
 
 .gap { 
     width: 100%;
@@ -305,7 +295,7 @@ nav.stroke ul li a:hover:after {
     background-color: black;
     color: lightgrey;
     padding: 14px 28px;
-    font-size: 16px;
+    font-size: 2rem;
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
@@ -314,6 +304,7 @@ nav.stroke ul li a:hover:after {
   .btn:hover {
     background-color: lightgrey;
     color: black;
+    border: 2px solid black;
   }
 
 /* Add styles for the row and column layout */

@@ -27,7 +27,7 @@ const IAT: React.FC = () => (
           </div>
         </div>
       </div>
-      <div className="column_after">
+      <div className="column_reg">
         <br /><br />
         <p className="big">
           The experiment results showed that the average reaction times of the participants do not conclusively favor one condition over the other (linking positive characteristics with male-associated words and female-associated words with negative characteristics, or vice versa). There are several factors that may contribute to this, including a high proportion of female participants (60% over the 50.8% in the population) and over half of the participants belonging to the Millenial or Gen Z populations, which are known for more liberal and progressive viewpoints (Parker et al., 2020) (The Generation Gap in American Politics, 2019).
