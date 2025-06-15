@@ -147,23 +147,7 @@
   box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 }
 
-/* Mobile-specific: prevent background image repetition and fix card sizing */
-/* @media only screen and (max-width: 600px) {
-  .project-card,
-  .project-card-overlay {
-    min-width: 0;
-    max-width: 98vw;
-    min-height: 220px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .project-card {
-    min-width: 0;
-    max-width: 98vw;
-    min-height: 220px;
-  }
-} */
+
 .project-card img {
   width: 100%;
   height: 260px;
@@ -254,30 +238,3 @@
   margin: 0 auto 100px auto;
   padding: 2rem 0;
 }
-
-/* .project-card-top-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999 !important;
-  text-align: center;
-  color: #fff !important;
-  font-size: 2.4rem;
-  font-weight: 700;
-  padding: 0.5rem 0;
-  background-color: #000 !important;
-  box-sizing: border-box;
-  line-height: 1;
-  opacity: 1 !important;
-} */ 
-
-/* .project-card-top-title h3 {
-  position: absolute;
-  z-index: 999 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1 !important;
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
-} */
