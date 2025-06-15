@@ -11,6 +11,7 @@
   max-width: 1000px;
   min-height: 400px;
   min-width: 400px;
+  aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,6 +147,23 @@
   box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 }
 
+/* Mobile-specific: prevent background image repetition and fix card sizing */
+/* @media only screen and (max-width: 600px) {
+  .project-card,
+  .project-card-overlay {
+    min-width: 0;
+    max-width: 98vw;
+    min-height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .project-card {
+    min-width: 0;
+    max-width: 98vw;
+    min-height: 220px;
+  }
+} */
 .project-card img {
   width: 100%;
   height: 260px;
