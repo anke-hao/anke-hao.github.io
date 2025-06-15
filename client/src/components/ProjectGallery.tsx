@@ -6,7 +6,7 @@ import type { Project } from "../types/project";
 
 const ProjectGallery: React.FC<{ projects: Project[] }> = ({ projects }) => {
   const [hoveredButtonId, setHoveredButtonId] = useState<number | null>(null);
-  const [hoveredCardId, setHoveredCardId] = useState<number | null>(null);
+//   const [hoveredCardId, setHoveredCardId] = useState<number | null>(null);
 
   return (
     <div className="project-gallery-grid">
@@ -14,8 +14,8 @@ const ProjectGallery: React.FC<{ projects: Project[] }> = ({ projects }) => {
         <div
           key={idx}
           className="project-card"
-          onMouseEnter={() => setHoveredCardId(idx)}
-          onMouseLeave={() => setHoveredCardId(null)}
+        //   onMouseEnter={() => setHoveredCardId(idx)}
+        //   onMouseLeave={() => setHoveredCardId(null)}
         >
           {/* <div className="project-card-text">
             <h3>{hoveredCardId === idx ? project.description : (project.title || "Learn More")}</h3>
