@@ -93,9 +93,13 @@ a {
     -moz-transition:.3s;
     -webkit-transition:.3s;
     transition:.3s;
+    cursor: pointer;
 }
 
-a:hover { color: gray; }
+a:hover { 
+    color: gray; 
+    cursor: help;
+}
 
 h1 {
     color: lightgrey;
@@ -243,6 +247,7 @@ nav ul li a {
     text-transform: uppercase;
     margin: 0 10px;
     font-size: 22px;
+    cursor: pointer;
 }
 
 nav ul li a,
@@ -255,6 +260,7 @@ nav ul li a:before {
 
 nav ul li a:hover {
     color: lightgrey;
+    cursor: crosshair;
 }
 
 /* stroke */
@@ -306,6 +312,7 @@ nav.stroke ul li a:hover:after {
     background-color: lightgrey;
     color: black;
     border: 2px solid black;
+    cursor: zoom-in;
   }
 
 /* Add styles for the row and column layout */
