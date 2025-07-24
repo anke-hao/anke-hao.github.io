@@ -297,7 +297,7 @@ nav.stroke ul li a:hover:after {
     color: lightgrey;
     padding: 14px 28px;
     font-size: 2rem;
-    cursor: pointer;
+    cursor: crosshair;
     transition: 0.5s;
     text-decoration: none;
   }
