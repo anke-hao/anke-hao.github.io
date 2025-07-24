@@ -93,6 +93,7 @@ a {
     -moz-transition:.3s;
     -webkit-transition:.3s;
     transition:.3s;
+    cursor: pointer;
 }
 
 a:hover { color: gray; }
@@ -243,6 +244,7 @@ nav ul li a {
     text-transform: uppercase;
     margin: 0 10px;
     font-size: 22px;
+    cursor: pointer;
 }
 
 nav ul li a,
