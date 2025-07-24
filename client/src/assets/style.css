@@ -95,7 +95,10 @@ a {
     transition:.3s;
 }
 
-a:hover { color: gray; }
+a:hover { 
+    color: gray; 
+    cursor: alias;
+}
 
 h1 {
     color: lightgrey;
@@ -255,6 +258,7 @@ nav ul li a:before {
 
 nav ul li a:hover {
     color: lightgrey;
+    cursor: crosshair;
 }
 
 /* stroke */
@@ -297,7 +301,7 @@ nav.stroke ul li a:hover:after {
     color: lightgrey;
     padding: 14px 28px;
     font-size: 2rem;
-    cursor: pointer;
+    cursor: grab;
     transition: 0.5s;
     text-decoration: none;
   }
@@ -306,6 +310,7 @@ nav.stroke ul li a:hover:after {
     background-color: lightgrey;
     color: black;
     border: 2px solid black;
+    cursor: grabbing;
   }
 
 /* Add styles for the row and column layout */
