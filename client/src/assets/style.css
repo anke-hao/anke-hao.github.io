@@ -93,9 +93,13 @@ a {
     -moz-transition:.3s;
     -webkit-transition:.3s;
     transition:.3s;
+    cursor: pointer;
 }
 
-a:hover { color: gray; }
+a:hover { 
+    color: gray; 
+    cursor: pointer;
+}
 
 h1 {
     color: lightgrey;
@@ -325,4 +329,23 @@ nav.stroke ul li a:hover:after {
     display: flex;
     flex-direction: column;
     justify-content: center;  /* Center content vertically */
+}
+
+/* External link cursors */
+a[href^="http"]:not([href*="localhost"]) {
+    cursor: alias;
+}
+
+/* Email link cursor */
+a[href^="mailto:"] {
+    cursor: text;
+}
+
+/* Navigation link cursors */
+nav ul li a {
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
 }
