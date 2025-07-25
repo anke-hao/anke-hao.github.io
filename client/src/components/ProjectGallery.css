@@ -145,6 +145,7 @@
 .project-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  cursor: zoom-in;
 }
 
 
@@ -217,7 +218,7 @@
   border: 2px solid #fff;
   padding: 1.2rem 0;
   font-size: 1.1rem;
-  cursor: pointer;
+  cursor: crosshair;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
@@ -225,6 +226,7 @@
   background: rgba(255,255,255,0.85);
   color: #000;
   border: 2px solid #000;
+  cursor: pointer;
 }
 
 .project-gallery-grid {
