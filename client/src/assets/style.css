@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("images/chicago.jpg");
+    cursor: crosshair;
 }
 
 body.other{
@@ -93,6 +94,7 @@ a {
     -moz-transition:.3s;
     -webkit-transition:.3s;
     transition:.3s;
+    cursor: pointer;
 }
 
 a:hover { color: gray; }
