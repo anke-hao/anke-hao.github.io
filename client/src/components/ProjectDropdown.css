@@ -1,0 +1,145 @@
+.project-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  max-width: 90vw;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.project-dropdown.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.project-dropdown-content {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.project-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.project-dropdown-item {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 250px;
+}
+
+.project-dropdown-card {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.project-dropdown-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-dropdown-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #222;
+}
+
+.project-dropdown-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.project-dropdown-card:hover .project-dropdown-overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.project-dropdown-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-family: "Century Gothic", sans-serif;
+  line-height: 1.2;
+}
+
+.project-dropdown-button {
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: "Century Gothic", sans-serif;
+  border: 1px solid #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-dropdown-card:hover .project-dropdown-button {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .project-dropdown {
+    width: 95vw;
+    left: 2.5vw;
+    transform: none;
+  }
+  
+  .project-dropdown-content {
+    padding: 1.5rem;
+  }
+  
+  .project-dropdown-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .project-dropdown-card {
+    height: 120px;
+  }
+  
+  .project-dropdown-title {
+    font-size: 1rem;
+  }
+  
+  .project-dropdown-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-dropdown-grid {
+    grid-template-columns: 1fr;
+  }
+}

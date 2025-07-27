@@ -281,6 +281,11 @@ nav.stroke ul li a:hover:after {
     width: 100%;
 }
 
+/* Dropdown container positioning */
+.nav-dropdown-container {
+    position: relative;
+}
+
 /* nav.stroke ul li a:visited {color: #ffffff;} */
 
 .nav-background {
