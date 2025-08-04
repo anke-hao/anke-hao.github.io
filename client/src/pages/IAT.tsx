@@ -1,6 +1,10 @@
 import React from "react";
+import useScrollToTop from "../hooks/useScrollToTop";
 
-const IAT: React.FC = () => (
+const IAT: React.FC = () => {
+  useScrollToTop();
+  
+  return (
   <main>
     <div className="w3-container w3-center w3-animate-opacity">
       <div className="column_reg">
@@ -42,6 +46,7 @@ const IAT: React.FC = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default IAT;
