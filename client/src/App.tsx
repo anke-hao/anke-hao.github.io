@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import CSW from "./pages/CSW";
 import DFG from "./pages/DFG";
@@ -13,6 +14,7 @@ import "./assets/style.css";
 
 const App: React.FC = () => (
   <Router>
+    <ScrollToTop />
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
