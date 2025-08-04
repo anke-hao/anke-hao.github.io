@@ -1,6 +1,10 @@
 import React from "react";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
-const ILC: React.FC = () => (
+const ILC: React.FC = () => {
+  useScrollToTop();
+  
+  return (
   <main>
     <div className="w3-container w3-center w3-animate-opacity">
       <div className="column_reg">
@@ -28,6 +32,7 @@ const ILC: React.FC = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default ILC;

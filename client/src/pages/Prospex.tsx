@@ -1,6 +1,10 @@
 import React from "react";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
-const Prospex: React.FC = () => (
+const Prospex: React.FC = () => {
+  useScrollToTop();
+  
+  return (
   <main>
     <div className="w3-container w3-center w3-animate-opacity">
       <div className="column_reg">
@@ -53,6 +57,7 @@ const Prospex: React.FC = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default Prospex;
