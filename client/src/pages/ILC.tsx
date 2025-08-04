@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const ILC: React.FC = () => (
-  <main>
+const ILC: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <main>
     <div className="w3-container w3-center w3-animate-opacity">
       <div className="column_reg">
         <h1><b>ILC:Entrepreneurship & Technology</b></h1>
@@ -28,6 +33,7 @@ const ILC: React.FC = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default ILC;
