@@ -1,86 +1,66 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { projectCards } from "../content/projects";
 import ProjectGallery from "../components/ProjectGallery";
-import type { Project } from "../types/project";
 
-const projects: Project[] = [
-    {
-      title: "Prospex",
-      description: "Won Most Impactful at Tech Community Challenge.",
-      image: "/images/prospex/prospexCover.png",
-      link: "/prospex",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Techstars Chicago Startup Week",
-      description: "Organized a major startup event in Chicago.",
-      image: "/images/CSW/sponsors.png",
-      link: "/csw",
-      buttonText: "See Event",
-    },
-    {
-      title: "Psychology Experiment",
-      description: "Published on the Open Science Framework and won my class's Big Data competition.",
-      image: "/images/IAT/IATCover.png",
-      link: "/iat",
-      buttonText: "Learn More",
-    },
-    {
-      title: "An Easier Mile",
-      description: "Volunteering as a Product Manager.",
-      image: "/images/AEM/BlueLogo_TransparentCircle.svg",
-      link: "/dfg",
-      buttonText: "Learn More",
-    },
-    {
-      title: "ILC:Entrepreneurship & Technology",
-      description: "Leading a premier business student organization on campus.",
-      image: "/images/ILC/ILC_Dark_Logo.png",
-      link: "/ilc",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Learning to Fly Venture Fund",
-      description: "Overseeing deal flow and visibility as Managing Partner.",
-      image: "/images/LTF/LTFSquare.png",
-      link: "/ltf",
-      buttonText: "Learn More",
-    },
-];
 const Home: React.FC = () => (
-    <main>
-        <section id="home" className="w3-container w3-center w3-animate-opacity center">
-            <h2>
-                Hey! I'm <span className="bold">Anke Hao</span>, an AI Engineer @ PwC.<br /><br />
-                Feel free to take a look around.
-            </h2>
-        </section>
-        <section id="introduction" className="w3-center center">
-            <div className="row">
-                <div className="column">
-                    <h2><b>WELCOME!</b></h2>
-                    <p>
-                        Hello! I'm Anke Hao, an AI Engineer at PwC based in Silicon Valley.<br /><br />
-                        My areas of interest include AI/ML, gaming, and CS/Psychology intersections.<br /><br />
-                    </p>
-                </div>
-                <div className="column">
-                    <div className="container">
-                        <img src="/images/ankehao.png" alt="ankehao" style={{ width: 300, height: 300 }} />
-                    </div>
-                </div>
-                <div className="column">
-                    <h2><b>WHAT'S HAPPENING</b></h2>
-                    <p>Going to genAI events in the Bay Area, volunteering at a cat shelter, and meeting new friends!<br /><br />
-                        In my free time, I'm learning game design, brushing up on RLHF, tinkering around in my <Link to="https://github.com/anke-hao"><b>GitHub</b></Link>, and making time for my cats.</p>
-                </div>
-            </div>
-        </section>
-        <section id="projects" className="w3-center center">
-            <h2><b>WHAT I'VE WORKED ON</b></h2>
-            <ProjectGallery projects={projects} />
-        </section>
-    </main>
+  <div className="home-page">
+    <section id="home" className="hero-section section-shell">
+      <div className="hero-card">
+        <p className="eyebrow">Portfolio</p>
+        <h1>
+          Hey! I&apos;m <span className="text-accent">Anke Hao</span>, a Deployed Engineer at Cognition. 
+        </h1>
+        <p className="hero-copy">
+          I&apos;m based in Silicon Valley and love building at the intersection of AI,
+          product, and community. Previously at Windsurf and PwC.
+        </p>
+      </div>
+    </section>
+
+    <section id="introduction" className="section-shell home-intro">
+      <div className="panel-grid">
+        <article className="content-panel">
+          <p className="eyebrow">Welcome</p>
+          <h2>Hello there</h2>
+          <p>
+            Hello! I&apos;m Anke Hao, a Deployed Engineer at Cognition based in Silicon Valley.
+          </p>
+          <p>My areas of interest include AI/ML, gaming, and CS/Psychology intersections.</p>
+        </article>
+
+        <div className="content-panel content-panel--photo">
+          <div className="profile-frame">
+            <img src="/images/ankehao.webp" alt="Portrait of Anke Hao" />
+          </div>
+        </div>
+
+        <article className="content-panel">
+          <p className="eyebrow">What&apos;s Happening</p>
+          <h2>Right now</h2>
+          <p>
+            Going to genAI events in the Bay Area, volunteering at a cat shelter, and
+            meeting new friends.
+          </p>
+          <p>
+            In my free time, I&apos;m learning game design, brushing up on RLHF, tinkering
+            around in my{" "}
+            <a href="https://github.com/anke-hao" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            , and making time for my cats.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" className="section-shell">
+      <div className="section-heading">
+        <p className="eyebrow">Projects</p>
+        <h2>What I&apos;ve Worked On</h2>
+      </div>
+      <ProjectGallery projects={projectCards} />
+    </section>
+  </div>
 );
 
 export default Home;

@@ -1,29 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
+import { projects } from "./content/projects";
+import AppLayout from "./components/AppLayout";
 import Home from "./pages/Home";
-import CSW from "./pages/CSW";
-import DFG from "./pages/DFG";
-import IAT from "./pages/IAT";
-import ILC from "./pages/ILC";
-import LTF from "./pages/LTF";
-import Prospex from "./pages/Prospex";
-import "./assets/style.css";
+import ProjectPage from "./pages/ProjectPage";
 
 const App: React.FC = () => (
   <Router>
-    <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/csw" element={<CSW />} />
-      <Route path="/dfg" element={<DFG />} />
-      <Route path="/iat" element={<IAT />} />
-      <Route path="/ilc" element={<ILC />} />
-      <Route path="/ltf" element={<LTF />} />
-      <Route path="/prospex" element={<Prospex />} />
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Home />} />
+        {projects.map((project) => (
+          <Route
+            key={project.route}
+            path={project.route}
+            element={<ProjectPage project={project} />}
+          />
+        ))}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
     </Routes>
-    <Footer />
   </Router>
 );
 

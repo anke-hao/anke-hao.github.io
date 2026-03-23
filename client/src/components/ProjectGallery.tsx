@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./ProjectGallery.css";
-import type { Project } from "../types/project";
+import type { ProjectCard } from "../types/project";
 
 
-const ProjectGallery: React.FC<{ projects: Project[] }> = ({ projects }) => {
-  const [hoveredButtonId, setHoveredButtonId] = useState<number | null>(null);
+const ProjectGallery: React.FC<{ projects: ProjectCard[] }> = ({ projects }) => {
+  const [hoveredButtonId, setHoveredButtonId] = useState<string | null>(null);
 
   return (
     <div className="project-gallery-grid">
-      {projects.map((project, idx) => (
+      {projects.map((project) => (
         <div
-          key={idx}
+          key={project.link}
           className="project-card"
         >
           <div
@@ -25,10 +25,10 @@ const ProjectGallery: React.FC<{ projects: Project[] }> = ({ projects }) => {
             <Link to={project.link} className="project-card-btn-link">
               <button
                 className="project-card-btn"
-                onMouseEnter={() => setHoveredButtonId(idx)}
+                onMouseEnter={() => setHoveredButtonId(project.link)}
                 onMouseLeave={() => setHoveredButtonId(null)}
               >
-                {hoveredButtonId === idx ? "View Project" : (project.buttonText || "Learn More")}
+                {hoveredButtonId === project.link ? "View Project" : (project.buttonText || "Learn More")}
               </button>
             </Link>
           </div>
