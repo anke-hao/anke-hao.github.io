@@ -74,6 +74,11 @@
   background: var(--surface-soft);
 }
 
+.project-page__media,
+.project-page__embed {
+  justify-self: center;
+}
+
 .project-page__media img {
   width: 100%;
 }
@@ -93,10 +98,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.project-page__embed {
-  aspect-ratio: 16 / 9;
 }
 
 .project-page__embed iframe {

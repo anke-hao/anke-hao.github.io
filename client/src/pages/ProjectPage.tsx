@@ -18,7 +18,14 @@ const renderBlock = (block: ProjectBlock) => {
       );
     case "image":
       return (
-        <figure className="project-page__media" style={block.style}>
+        <figure
+          className="project-page__media"
+          style={{
+            width: block.width ?? "100%",
+            maxWidth: "100%",
+            ...block.style,
+          }}
+        >
           <img src={block.src} alt={block.alt} width={block.width ?? "100%"} />
         </figure>
       );
@@ -34,7 +41,17 @@ const renderBlock = (block: ProjectBlock) => {
       );
     case "embed":
       return (
-        <div className="project-page__embed" style={block.style}>
+        <div
+          className="project-page__embed"
+          style={{
+            width: block.width ?? "100%",
+            maxWidth: "100%",
+            ...(block.width && block.height
+              ? { aspectRatio: `${block.width} / ${block.height}` }
+              : {}),
+            ...block.style,
+          }}
+        >
           <iframe
             src={block.src}
             title={block.title}
